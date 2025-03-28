@@ -1,0 +1,109 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KolejPasją.pl - Portal dla miłośników kolei</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+        }
+        .menu-bg {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-radius: 8px;
+        }
+        .menu-item:hover {
+            background-color: #1e88e5;
+            transition: background 0.3s;
+        }
+        header {
+            background-image: url('https://source.unsplash.com/1600x900/?train,railway,tracks');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 90vw;
+        }
+        header p {
+            font-size: 1rem;
+            font-weight: lighter;
+            max-width: 90vw;
+        }
+        .menu-btn {
+            font-size: 1.5rem;
+            padding: 8px 12px;
+        }
+        .menu-item {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+        .main-text {
+            font-size: 1rem;
+            max-width: 90vw;
+            text-align: center;
+        }
+        .menu-item a {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+    <header>
+        <h1>KolejPasją.pl</h1>
+        <p>Twoje centrum wiedzy o kolei – wiadomości, tabor, linie, nauka i forum dla pasjonatów.</p>
+    </header>
+
+    <nav class="absolute top-4 left-4 z-10">
+        <button id="menu-btn" class="menu-btn text-white bg-blue-600 rounded focus:outline-none shadow-lg">
+            ☰
+        </button>
+        <ul id="menu" class="hidden menu-bg shadow-xl p-3 absolute mt-2 left-0 w-48">
+            <li class="menu-item border-b"><a href="wiadomosci.html">Wiadomości</a></li>
+            <li class="menu-item border-b"><a href="tabor.html">Tabor</a></li>
+            <li class="menu-item border-b"><a href="linie.html">Linie kolejowe</a></li>
+            <li class="menu-item border-b"><a href="nauka.html">Nauka</a></li>
+            <li class="menu-item border-b"><a href="forum.html">Forum kolejowe</a></li>
+            <li class="menu-item border-b"><a href="symulatory.html">Forum symulatorów</a></li>
+            <li class="menu-item border-b"><a href="fotografia.html">Fotografia</a></li>
+            <li class="menu-item border-b"><a href="dolacz.html">Dołącz do administratorów</a></li>
+            <li class="menu-item"><a href="onas.html">O nas</a></li>
+        </ul>
+    </nav>
+    
+    <main class="p-6 text-center">
+        <h2 class="text-xl font-bold mb-4">Witamy na KolejPasją.pl!</h2>
+        <p class="mt-2 main-text">Odkrywaj fascynujący świat kolei – wiadomości, tabor, linie, nauka i forum dla pasjonatów.</p>
+    </main>
+
+    <script>
+        document.getElementById("menu-btn").addEventListener("click", function() {
+            document.getElementById("menu").classList.toggle("hidden");
+        });
+    </script>
+    
+    <footer class="bg-gray-900 text-gray-400 text-center p-3 mt-12 w-full absolute bottom-0 text-sm">
+        &copy; 2025 KolejPasją.pl - Wszystkie prawa zastrzeżone.
+    </footer>
+</body>
+</html>
